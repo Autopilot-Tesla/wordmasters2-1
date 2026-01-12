@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discor-AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Babel for on-the-fly compilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background-color: #2b2d31; }
+      ::-webkit-scrollbar-thumb { background-color: #1a1b1e; border-radius: 4px; }
+      
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-up { animation: fade-in-up 0.5s ease-out; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "@google/genai": "https://esm.sh/@google/genai@0.1.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0",
+    "./App": "./App.tsx",
+    "./types": "./types.ts",
+    "./constants": "./constants.ts",
+    "./components/LoginScreen": "./components/LoginScreen.tsx",
+    "./components/ServerList": "./components/ServerList.tsx",
+    "./components/ChannelList": "./components/ChannelList.tsx",
+    "./components/ChatArea": "./components/ChatArea.tsx",
+    "./components/UserList": "./components/UserList.tsx",
+    "./services/geminiService": "./services/geminiService.ts",
+    "./services/discordService": "./services/discordService.ts",
+    "./services/liveService": "./services/liveService.ts",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="bg-[#313338] text-gray-100 overflow-hidden">
+    <div id="root"></div>
+    <!-- Load index.tsx via Babel -->
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="./index.tsx"></script>
+  </body>
+</html>
